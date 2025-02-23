@@ -1,9 +1,0 @@
-# Changes here will be overwritten by Copier; NEVER EDIT MANUALLY
-_commit: 66fd52c
-_src_path: gh:schwallergroup/copier-liac-minimal
-author_email: candice.habert@epfl.ch anastasia.floris@epfl.ch
-author_name: Candice&Anastasia
-github_org: candicehbt
-package_name: pkapredict
-project_name: pKaPredict
-short_description: pKaPredict project
