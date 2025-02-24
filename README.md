@@ -48,7 +48,7 @@ If you need jupyter lab, install it
 
 Initialize Git (only for the first time). 
 
-Note: You should have create an empty repository on `https://github.com:candicehbt/pKaPredict`.
+Note: You should have create an empty repository on `https://github.com:anastasiafloris/pKaPredict`.
 
 ```
 git init
