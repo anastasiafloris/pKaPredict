@@ -56,7 +56,7 @@ git add *
 git add .*
 git commit -m "Initial commit" 
 git branch -M main
-git remote add origin git@github.com:candicehbt/pKaPredict.git 
+git remote add origin git@github.com:anastasiafloris/pKaPredict.git 
 git push -u origin main
 ```
 
