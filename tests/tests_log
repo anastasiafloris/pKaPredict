@@ -1,0 +1,53 @@
+test_clean_and_visualize_pka:
+================================== test session starts ===================================
+platform darwin -- Python 3.13.2, pytest-8.3.5, pluggy-1.5.0 -- /Users/anastasiafloris/miniconda3/envs/pKaPredict/bin/python
+cachedir: .pytest_cache
+rootdir: /Users/anastasiafloris/Desktop/pKaPredict/pKaPredict
+configfile: pyproject.toml
+collected 3 items                                                                        
+
+test_clean_and_visualize_pka.py::test_clean_and_visualize_pka_valid_data PASSED    [ 33%]
+test_clean_and_visualize_pka.py::test_empty_dataframe PASSED                       [ 66%]
+test_clean_and_visualize_pka.py::test_missing_required_columns PASSED              [100%]
+
+=================================== 3 passed in 1.27s ====================================
+
+test_plot_data:
+================================== test session starts ===================================
+platform darwin -- Python 3.13.2, pytest-8.3.5, pluggy-1.5.0 -- /Users/anastasiafloris/miniconda3/envs/pKaPredict/bin/python
+cachedir: .pytest_cache
+rootdir: /Users/anastasiafloris/Desktop/pKaPredict/pKaPredict
+configfile: pyproject.toml
+collected 1 item                                                                         
+
+test_plot_data.py::test_plot_data_output PASSED                                    [100%]
+
+=================================== 1 passed in 9.88s ====================================
+
+test_RDkit_descriptors:
+================================== test session starts ===================================
+platform darwin -- Python 3.13.2, pytest-8.3.5, pluggy-1.5.0 -- /Users/anastasiafloris/miniconda3/envs/pKaPredict/bin/python
+cachedir: .pytest_cache
+rootdir: /Users/anastasiafloris/Desktop/pKaPredict/pKaPredict
+configfile: pyproject.toml
+collected 2 items                                                                        
+
+test_RDkit_descriptors.py::test_RDkit_descriptors_valid_smiles PASSED              [ 50%]
+test_RDkit_descriptors.py::test_RDkit_descriptors_with_invalid_smiles PASSED       [100%]
+
+=================================== 2 passed in 1.81s ====================================
+
+test_smiles_to_rdkit_descriptors_predict_pKa:
+==================================================== test session starts ====================================================
+platform darwin -- Python 3.13.2, pytest-8.3.5, pluggy-1.5.0 -- /Users/anastasiafloris/miniconda3/envs/pKaPredict/bin/python
+cachedir: .pytest_cache
+rootdir: /Users/anastasiafloris/Desktop/pKaPredict/pKaPredict
+configfile: pyproject.toml
+collected 4 items                                                                                                           
+
+test_smiles_to_rdkit_descriptors_predict_pKa.py::test_smiles_to_rdkit_descriptors_valid PASSED                        [ 25%]
+test_smiles_to_rdkit_descriptors_predict_pKa.py::test_smiles_to_rdkit_descriptors_invalid PASSED                      [ 50%]
+test_smiles_to_rdkit_descriptors_predict_pKa.py::test_predict_pKa PASSED                                              [ 75%]
+test_smiles_to_rdkit_descriptors_predict_pKa.py::test_load_model_file_not_found PASSED                                [100%]
+
+===================================================== 4 passed in 2.01s =====================================================
