@@ -9,7 +9,18 @@ requires-python = ">=3.10"
 license = {file = "LICENSE"}
 description = "pKaPredict project"
 dependencies = [
-    # "rdkit",
+    "numpy",
+    "pandas",
+    "matplotlib",
+    "seaborn",
+    "requests",
+    "ipython",
+    "rdkit",
+    "scikit-learn",
+    "lightgbm",
+    "lazypredict",
+    "scipy",
+    "tqdm",
 ]
 authors = [
     {name = "Anastasia&Candice", email = "anastasia.floris@epfl.ch candice.habert@epfl.ch"}

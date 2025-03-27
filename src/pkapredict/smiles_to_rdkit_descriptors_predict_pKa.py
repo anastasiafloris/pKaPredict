@@ -1,3 +1,4 @@
+"""This module predicts the pKa value of a molecule from its SMILES string by computing RDKit molecular descriptors and feeding them into a pre-trained LightGBM regression model."""
 import os
 import numpy as np
 import pickle

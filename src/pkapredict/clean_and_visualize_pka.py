@@ -1,3 +1,4 @@
+"""This module cleans and visualizes pKa datasets and computes RDKit molecular descriptors for SMILES strings, with optional CSV output for example molecules."""
 from pathlib import Path
 import pandas as pd
 import matplotlib.pyplot as plt
