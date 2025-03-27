@@ -23,7 +23,7 @@ dependencies = [
     "tqdm",
 ]
 authors = [
-    {name = "Anastasia&Candice", email = "anastasia.floris@epfl.ch candice.habert@epfl.ch"}
+    {name = "Anastasia&Candice", email = "anastasia.floris@epfl.ch"}
 ]
 classifiers = [
     "Development Status :: 3 - Alpha",
