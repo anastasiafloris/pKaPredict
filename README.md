@@ -60,7 +60,7 @@ pip install jupyterlab
 
 🍏 For macOS users (⚠ required for LightGBM to work):
 
-4. **Install the system library libomp**:
+5. **Install the system library libomp**:
 ```bash
 brew install libomp
 ```
