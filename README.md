@@ -50,7 +50,7 @@ conda activate pkapredict_env
 ```
 3. **Install the package**:
 ```bash 
-pip install .
+pip install pKaPredict
 ```
 
 4. **Install jupyter lab**:
