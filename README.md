@@ -67,7 +67,8 @@ brew install libomp
 If brew is not installed, follow the instructions here: https://brew.sh
 
 6. **The package is yours 🎁**:
-Run the packagetest.py file in a python or jupyter environment to predict the pKa of a molecule of your choice, using its SMILES string.
+
+Run the test_package.py file in a python or jupyter environment to predict the pKa of a molecule of your choice, using its SMILES string.
 
 
 ## 🪪 License 
