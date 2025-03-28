@@ -32,7 +32,7 @@ This package provides a streamlined pipeline for predicting the pKa values of mo
 1. **Clone the repository**:
 
 ```bash
-git clone https://github.com/TonNomUtilisateur/pKaPredict.git
+git clone https://github.com/anastasiafloris/pKaPredict.git
 cd pKaPredict
 ```
 2. **Create and activate the conda environnement**:
