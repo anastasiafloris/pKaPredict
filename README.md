@@ -29,22 +29,46 @@ This package provides a streamlined pipeline for predicting the pKa values of mo
 
 ## 👩‍💻 Installation
 
-Create a new environment, you may also give the environment a different name. 
+### 🌱 Environment setup
 
+1. **Clone the repository**:
+
+```bash
+git clone https://github.com/TonNomUtilisateur/pKaPredict.git
+cd pKaPredict
 ```
-conda create -n pkapredict python=3.10 
+2. **Create and activate the conda environnement**:
+
+
+If your project includes an environment.yml file:
+```bash 
+conda env create -n pkapredict_env -f environment.yml
+conda activate pkapredict_env
+```
+If not, you can create one manually:
+```bash
+conda create -n pkapredict_env python=3.10 -y
+conda activate pkapredict_env
+```
+3. **Install the package**:
+```bash 
+pip install .
 ```
 
-```
-conda activate pkapredict
-(conda_env) $ pip install .
+4. **Install jupyter lab**:
+```bash
+pip install jupyterlab
 ```
 
-If you need jupyter lab, install it 
+🍏 For macOS users (⚠ required for LightGBM to work):
 
+4. **Install the system library libomp**:
+```bash
+brew install libomp
 ```
-(pkapredict) $ pip install jupyterlab
-```
+If brew is not installed, follow the instructions here: https://brew.sh
+
+
 
 
 ## 🛠️ Development installation
