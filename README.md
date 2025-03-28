@@ -100,5 +100,19 @@ To install the package, run
 (conda_env) $ tox
 ```
 
+## 🪪 License 
+
+This project is licensed under the MIT License.  
+You are free to use, modify, and distribute it with proper attribution.
 
 
+## 📗 References
+
+The dataset used in this project is the [test_acids_bases_descfinal_nozwitterions.csv](https://github.com/cbio3lab/pKa/blob/main/Data/test_acids_bases_descfinal_nozwitterions.csv) file from the cbio3lab repository.  
+It was originally extracted from the Harvard [Dataverse](https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi:10.7910/DVN/6A67L9).
+
+## 👯‍♀️ Authors
+
+This project was completed as part of the EPFL course *Practical Programming in Chemistry*.
+- [Anastasia Floris](https://github.com/anastasiafloris)  
+- [Candice Habert](https://github.com/candicehbt)
