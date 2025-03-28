@@ -9,7 +9,7 @@ pKaPredict
 <br>
 
 
-pKaPredict project
+
 
 ## 📦 Overview
 This package provides a streamlined pipeline for predicting the pKa values of molecules from their SMILES strings using machine learning. It includes tools for data cleaning, descriptor generation via RDKit, and model training using LightGBM and other regressors. The package is designed to be easily pip-installable and modular, making it ideal for cheminformatics applications and molecular property prediction tasks. 
