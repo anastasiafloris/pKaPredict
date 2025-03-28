@@ -29,8 +29,6 @@ This package provides a streamlined pipeline for predicting the pKa values of mo
 
 ## 👩‍💻 Installation
 
-### 🌱 Environment setup
-
 1. **Clone the repository**:
 
 ```bash
