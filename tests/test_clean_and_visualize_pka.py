@@ -1,13 +1,6 @@
-
-import sys
-import os
 import pandas as pd
 import pytest
-
-# Add the 'src' folder to sys.path so pkapredict can be imported
-sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), "..","src","pkapredict")))
-
-from clean_and_visualize_pka import clean_and_visualize_pka
+from pkapredict.clean_and_visualize_pka import clean_and_visualize_pka
 @pytest.fixture
 def sample_data():
     return pd.DataFrame({

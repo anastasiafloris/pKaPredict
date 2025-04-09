@@ -1,6 +1,4 @@
-"""Module to compute RDKit molecular descriptors from SMILES strings and output results as a CSV file."""
-
-
+"""Module defining the function which computes RDKit molecular descriptors from SMILES strings"""
 import pandas as pd
 import os
 from rdkit import Chem
@@ -41,21 +39,3 @@ def RDkit_descriptors(smiles: list) -> tuple:
 
     return Mol_descriptors, desc_names
 
-def example_descriptors_output() -> None:
-    """
-    Compute molecular descriptors for a few example SMILES and output as a CSV file.
-    """
-    example_smiles = ["CCO", "C(=O)O"]
-    print("🔹 Computing molecular descriptors for example molecules...")
-    Mol_descriptors, desc_names = RDkit_descriptors(example_smiles)
-    
-    # Create DataFrame with descriptors and add SMILES column
-    df_descriptors = pd.DataFrame(Mol_descriptors, columns=desc_names)
-    df_descriptors.insert(0, "Smiles", example_smiles)  # Insert Smiles as the first column
-    
-    # Output CSV data
-    print("✅ Descriptor computation completed. Outputting CSV data:")
-    print(df_descriptors.to_csv(index=False))
-
-if __name__ == "__main__":
-    example_descriptors_output()

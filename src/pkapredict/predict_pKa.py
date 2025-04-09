@@ -1,38 +1,6 @@
-"""This module predicts the pKa value of a molecule from its SMILES string by computing RDKit molecular descriptors and feeding them into a pre-trained LightGBM regression model."""
-import os
-import numpy as np
-import pickle
+from pkapredict.smiles_to_rdkit_descriptors import smiles_to_rdkit_descriptors
+from pkapredict.load_model import load_model
 import pandas as pd
-from rdkit import Chem
-from rdkit.ML.Descriptors.MoleculeDescriptors import MolecularDescriptorCalculator
-
-def smiles_to_rdkit_descriptors(smiles, descriptor_names):
-    """
-    Convert a SMILES string to a vector of RDKit molecular descriptors.
-    """
-    mol = Chem.MolFromSmiles(smiles)
-    if mol:
-        calculator = MolecularDescriptorCalculator(descriptor_names)
-        descriptors = np.array(calculator.CalcDescriptors(mol))
-        return descriptors
-    else:
-        raise ValueError(f"❌ Invalid SMILES string: {smiles}")
-
-def load_model(): 
-    """
-    Load a pickled LGBMRegressor model from the package's models directory.
-    """
-    base_dir = os.path.dirname(os.path.abspath(__file__))  # Get current script directory
-    model_path = os.path.abspath(os.path.join(base_dir, "..", "..", "notebooks", "models", "best_pKa_model.pkl"))
-
-    
-    if not os.path.exists(model_path):
-        raise FileNotFoundError(f"❌ Model file not found at: {model_path}")
-
-    with open(model_path, "rb") as file:
-        model = pickle.load(file)
-    print("✅ LGBMRegressor model successfully loaded!")
-    return model
 
 def predict_pKa(smiles, model, descriptor_names):
     """

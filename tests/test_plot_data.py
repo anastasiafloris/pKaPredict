@@ -1,12 +1,6 @@
-import sys
-import os
 import pytest
 import numpy as np
-
-# Add the 'src' folder to sys.path so pkapredict can be imported
-sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "src", "pkapredict")))
-
-from plot_data import plot_data
+from pkapredict.plot_data import plot_data
 
 def test_plot_data_output(capsys, monkeypatch):
     # Suppress the actual plot display

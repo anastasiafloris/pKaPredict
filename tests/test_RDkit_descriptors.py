@@ -1,11 +1,6 @@
-import sys
-import os
 import pytest
 
-# Add the 'src' folder to sys.path so pkapredict can be imported
-sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "src", "pkapredict")))
-
-from RDkit_descriptors import RDkit_descriptors
+from pkapredict.RDkit_descriptors import RDkit_descriptors
 
 def test_RDkit_descriptors_valid_smiles():
     smiles = ["CCO", "C(=O)O"]  # ethanol and formic acid
