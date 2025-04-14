@@ -12,20 +12,8 @@ pKaPredict
 
 
 ## 📦 Overview
-This package provides a streamlined pipeline for predicting the pKa values of molecules from their SMILES strings using machine learning. It includes tools for data cleaning, descriptor generation via RDKit, and model training using LightGBM and other regressors. The package is designed to be easily pip-installable and modular, making it ideal for cheminformatics applications and molecular property prediction tasks. 
+This package provides a streamlined pipeline for predicting the pKa values of molecules from their SMILES strings using machine learning. It includes functionalities that enable descriptor generation via RDKit, and model training using LightGBM and other regressors. The package is designed to be easily pip-installable and modular, making it ideal for cheminformatics applications and molecular property prediction tasks. 
 
-## 🎀 Summary
-🤯 Acquiring Dataset <br>
-🧹 Cleaning Dataset <br>
-🛟 Saving the cleaned data to a csv file <br>
-🤓 Computation of RDKit Molecular Descriptors <br>
-💡 Formatting the dataset for machine learning <br>
-🕹️ Machine learning model selection <br>
-🌲 Machine learning model 🥇: ExtraTreesRegressor <br>
-🤖 Machine learning model 🥈 : LGBMRegressor <br>
-🧐 Comparison of the two machine learning models <br>
-🧅 Saving the LGBMRegressor trained model <br>
-🩷 Usage of this trained machine learning model
 
 ## 👩‍💻 Installation
 
