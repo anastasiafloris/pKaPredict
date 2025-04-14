@@ -39,7 +39,6 @@ classifiers = [
     "Programming Language :: Python :: 3.11",
 ]
 
-
 [project.urls]
 source = "https://github.com/candicehbt/pKaPredict"
 tracker = "https://github.com/candicehbt/pKaPredict/issues"
@@ -59,9 +58,6 @@ doc = [
     "sphinx-copybutton",
 ]
 
-[tool.hatch.version]
-path = "src/pkapredict/__init__.py"
-
 [tool.pytest.ini_options]
 testpaths = [
     "tests",
@@ -69,10 +65,11 @@ testpaths = [
 
 [tool.coverage.run]
 omit = [
-    '__init__.py'
+    "__init__.py"
 ]
 
 [tool.coverage.report]
 exclude_also = [
     "if __name__ == .__main__.:",
 ]
+
