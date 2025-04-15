@@ -7,4 +7,4 @@ from .predict_pKa import predict_pKa
 from .RDkit_descriptors import RDkit_descriptors
 from .smiles_to_rdkit_descriptors import smiles_to_rdkit_descriptors
 
-__version__ = "0.1.1"
+__version__ = "0.1.2"
