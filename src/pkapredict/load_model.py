@@ -16,3 +16,8 @@ def load_model():
         model = pickle.load(file)
     print("✅ LGBMRegressor model successfully loaded!")
     return model
+
+
+
+
+
