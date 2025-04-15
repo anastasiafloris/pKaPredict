@@ -12,8 +12,28 @@ pKaPredict
 
 
 ## 📦 Overview
-This package provides a streamlined pipeline for predicting the pKa values of molecules from their SMILES strings using machine learning. It includes functionalities that enable descriptor generation via RDKit, and model training using LightGBM and other regressors. The package is designed to be easily pip-installable and modular, making it ideal for cheminformatics applications and molecular property prediction tasks. 
 
+*pKaPredict is a cheminformatics tool that predicts the acid dissociation constant (pKa) of chemical compounds from their SMILES strings.  The package is designed to be easily pip-installable and modular, making it ideal for cheminformatics applications and molecular property prediction tasks. The package combines RDKit-based molecular descriptors with a pre-trained LGBMRegressor model for fast, reproducible predictions. The workflow includes data preprocessing, descriptor generation, model loading, prediction, and result visualization.
+
+Main Functions:
+
+→ smiles_to_rdkit_descriptors
+Converts a list of SMILES strings into a comprehensive set of 2D descriptors, topological indices, and fragment counts using RDKit.
+
+→ RDKit_descriptors
+Transforms a DataFrame of SMILES into molecular descriptors—used for both training and inference.
+
+→ load_model
+Loads the pre-trained LightGBM model optimized for pKa prediction.
+
+→ predict_pKa
+Takes molecular descriptors as input and returns predicted pKa values using the loaded model.
+
+→ clean_and_visualize_pka
+Cleans the training dataset by removing duplicates and missing values; also provides basic visualizations for data exploration.
+
+→ plot_data
+Creates scatter plots comparing predicted vs. experimental pKa values to evaluate model performance
 
 ## 👩‍💻 Installation
 
