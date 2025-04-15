@@ -13,27 +13,32 @@ pKaPredict
 
 ## 📦 Overview
 
-*pKaPredict is a cheminformatics tool that predicts the acid dissociation constant (pKa) of chemical compounds from their SMILES strings.  The package is designed to be easily pip-installable and modular, making it ideal for cheminformatics applications and molecular property prediction tasks. The package combines RDKit-based molecular descriptors with a pre-trained LGBMRegressor model for fast, reproducible predictions. The workflow includes data preprocessing, descriptor generation, model loading, prediction, and result visualization.
+*pKaPredict* is a cheminformatics tool that predicts the acid dissociation constant (pKa) of chemical compounds from their SMILES strings.  The package is designed to be easily pip-installable and modular, making it ideal for cheminformatics applications. The package combines RDKit generated molecular descriptors with a pre-trained LGBMRegressor model for fast, reproducible predictions. The workflow includes training data preprocessing, descriptor generation, model loading, prediction, and result visualization.
 
-Main Functions:
+💡 Main Functions :
 
-→ smiles_to_rdkit_descriptors
-Converts a list of SMILES strings into a comprehensive set of 2D descriptors, topological indices, and fragment counts using RDKit.
+*Functions used to train the machine learning model on a training dataset*
 
-→ RDKit_descriptors
-Transforms a DataFrame of SMILES into molecular descriptors—used for both training and inference.
-
-→ load_model
-Loads the pre-trained LightGBM model optimized for pKa prediction.
-
-→ predict_pKa
-Takes molecular descriptors as input and returns predicted pKa values using the loaded model.
-
-→ clean_and_visualize_pka
+→ **clean_and_visualize_pka**
 Cleans the training dataset by removing duplicates and missing values; also provides basic visualizations for data exploration.
 
-→ plot_data
-Creates scatter plots comparing predicted vs. experimental pKa values to evaluate model performance
+→ **RDKit_descriptors**
+Transforms a DataFrame of SMILES into molecular descriptors, used for training the model.
+    
+→ **plot_data**
+Creates scatter plots comparing predicted vs. experimental pKa values to evaluate model performance and choose the most adapted model for this usage.
+
+*Core functions for predicting pKa from user-provided SMILES inputs*
+
+→ **load_model**
+Loads the pre-trained LightGBM model optimized for pKa prediction.
+
+→ **smiles_to_rdkit_descriptors**
+Converts a user-provided SMILES input into a vector of RDKit molecular descriptors.
+
+→ **predict_pKa**
+Takes molecular descriptors as input and returns predicted pKa values using the loaded model.
+
 
 ## 👩‍💻 Installation
 
