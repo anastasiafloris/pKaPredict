@@ -66,7 +66,7 @@ brew install libomp
 ```
 If brew is not installed, follow the instructions here: https://brew.sh
 
-5. **Navigate to the root source of the package from your terminal**:
+5. **Navigate to the root directory of the package in your terminal**:
 ```bash
 cd src
 cd pkapredict
