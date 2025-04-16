@@ -49,14 +49,6 @@ git clone https://github.com/anastasiafloris/pKaPredict.git
 cd pKaPredict
 ```
 2. **Create and activate the conda environnement**:
-
-
-If your project includes an environment.yml file:
-```bash 
-conda env create -n pkapredict_env -f environment.yml
-conda activate pkapredict_env
-```
-If not, you can create one manually:
 ```bash
 conda create -n pkapredict_env python=3.10 -y
 conda activate pkapredict_env
@@ -66,23 +58,25 @@ conda activate pkapredict_env
 pip install pKaPredict
 ```
 
-4. **Install jupyter lab**:
-```bash
-pip install jupyterlab
-```
-
 🍏 For macOS users (⚠ required for LightGBM to work):
 
-5. **Install the system library libomp**:
+4. **Install the system library libomp**:
 ```bash
 brew install libomp
 ```
 If brew is not installed, follow the instructions here: https://brew.sh
 
+5. **Navigate to the root source of the package from your terminal**:
+```bash
+cd src
+cd pkapredict
+```
 6. **The package is yours 🎁**:
 
-Run the test_package.py file in a python or jupyter environment to predict the pKa of a molecule of your choice, using its SMILES string.
-
+Run the test_package.py file in your terminal to predict the pKa of a molecule of your choice, using its SMILES string:
+```bash
+python test_package.py
+```
 
 ## 🪪 License 
 
