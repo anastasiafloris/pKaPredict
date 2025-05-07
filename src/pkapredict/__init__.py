@@ -2,7 +2,7 @@
 
 
 from .load_model import load_model
-from .plot_data import plot_data
+from .plotting import plot_data, plot_best_models, plot_k_vs_r2_ET
 from .predict_pKa import predict_pKa
 from .RDkit_descriptors import RDkit_descriptors
 from .smiles_to_rdkit_descriptors import smiles_to_rdkit_descriptors
