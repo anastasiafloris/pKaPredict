@@ -1,4 +1,31 @@
-"""Module defining the function for plotting predicted vs actual pKa values with regression line and evaluation metrics."""
+"""
+plotting.py
+
+This module provides plotting utilities for visualizing model performance and feature selection 
+in the context of pKa prediction using machine learning.
+
+Functions included:
+
+1. plot_data(actual, predicted, title):
+   - Plots predicted vs. actual pKa values.
+   - Shows a regression line, R² score, and RMSE.
+   - Useful for evaluating the final model visually.
+
+2. plot_best_models(X_train, X_valid, y_train, y_valid, random_state=42):
+   - Runs LazyRegressor to benchmark multiple regression models.
+   - Plots the top 10 models based on R² scores.
+   - Saves the plot as a PNG file.
+
+3. plot_k_vs_r2_ET(k_values, r2_scores, save_filename="optimalkvalue.png"):
+   - Plots R² score as a function of the number of selected features (k) for Extra Trees.
+   - Saves and displays the plot.
+
+4. LGBMplot_k_vs_r2(k_values, r2_scores, save_filename="OptimalKValueLGBM.png"):
+   - Same as above, but for LightGBM feature selection performance.
+   - Saves and displays the plot.
+
+"""
+
 
 import os
 import numpy as np
@@ -50,7 +77,7 @@ def plot_data(actual, predicted, title):
     
     print(f"✅ Plot generated with R² = {R2:.2f} and RMSE = {rmse:.2f}")
 
-    # model_selector.py
+    
 
 
 
@@ -133,9 +160,10 @@ def plot_k_vs_r2_ET(k_values, r2_scores, save_filename="optimalkvalue.png"):
 
     plt.savefig(save_path, dpi=300, bbox_inches='tight')
 
-    
+    plt.show()
 
     return save_path
+
 
 
 
@@ -160,6 +188,7 @@ def LGBMplot_k_vs_r2(k_values, r2_scores, save_filename="OptimalKValueLGBM.png")
     plt.title("Optimal k for SelectKBest Feature Selection", color="black")
     plt.gca().set_facecolor('white')
     plt.tick_params(axis='both', colors='black')
+    
 
     # Create save directory
     plot_dir = os.path.join(os.getcwd(), "Plots")
@@ -167,8 +196,9 @@ def LGBMplot_k_vs_r2(k_values, r2_scores, save_filename="OptimalKValueLGBM.png")
     save_path = os.path.join(plot_dir, save_filename)
 
     plt.savefig(save_path, dpi=300, bbox_inches='tight')
-    plt.close()
-
+    
+    plt.show()
     return save_path
+
 
 

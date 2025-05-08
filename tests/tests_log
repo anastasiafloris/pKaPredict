@@ -1,26 +1,43 @@
-test_plot_data: 
+test_data_preprocessing: 
 
-================================================= test session starts =================================================
+========================================================= test session starts ==========================================================
 platform darwin -- Python 3.13.2, pytest-8.3.5, pluggy-1.5.0
 rootdir: /Users/anastasiafloris/Desktop/pKaPredict/pKaPredict
 configfile: pyproject.toml
-collected 1 item                                                                                                      
+collected 5 items                                                                                                                      
 
-../Desktop/pKaPredict/pKaPredict/tests/test_plot_data.py .                                                      [100%]
+tests/test_data_preprocessing.py .....                                                                                           [100%]
 
-================================================== 1 passed in 4.93s ==================================================
+========================================================== 5 passed in 6.48s ===========================================================
 
-test_clean_and_visualize_pka:
-
-================================================= test session starts =================================================
+test_plotting:
+========================================================= test session starts ==========================================================
 platform darwin -- Python 3.13.2, pytest-8.3.5, pluggy-1.5.0
 rootdir: /Users/anastasiafloris/Desktop/pKaPredict/pKaPredict
 configfile: pyproject.toml
-collected 3 items                                                                                                     
+collected 3 items                                                                                                                      
 
-../Desktop/pKaPredict/pKaPredict/tests/test_clean_and_visualize_pka.py ...                                      [100%]
+tests/test_plotting.py ...                                                                                                       [100%]
 
-================================================== 3 passed in 2.35s ==================================================
+=========================================================== warnings summary ===========================================================
+tests/test_plotting.py::test_plot_data
+  /Users/anastasiafloris/Desktop/pKaPredict/pKaPredict/src/pkapredict/plotting.py:76: UserWarning: FigureCanvasAgg is non-interactive, and thus cannot be shown
+    plt.show()
+
+tests/test_plotting.py::test_plot_best_models
+  /Users/anastasiafloris/miniconda3/envs/pKaPredict/lib/python3.13/site-packages/sklearn/neural_network/_multilayer_perceptron.py:691: ConvergenceWarning: Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.
+    warnings.warn(
+
+tests/test_plotting.py::test_plot_best_models
+  /Users/anastasiafloris/miniconda3/envs/pKaPredict/lib/python3.13/site-packages/sklearn/utils/validation.py:2739: UserWarning: X does not have valid feature names, but LGBMRegressor was fitted with feature names
+    warnings.warn(
+
+tests/test_plotting.py::test_plot_k_vs_r2_ET_runs_without_error
+  /Users/anastasiafloris/Desktop/pKaPredict/pKaPredict/src/pkapredict/plotting.py:163: UserWarning: FigureCanvasAgg is non-interactive, and thus cannot be shown
+    plt.show()
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+==================================================== 3 passed, 4 warnings in 11.80s ====================================================
 
 test_RDkit_descriptors:
 
@@ -46,29 +63,7 @@ collected 1 item
 
 ================================================== 1 passed in 0.04s ==================================================
 
-test_plot_data:
 
-================================================= test session starts =================================================
-platform darwin -- Python 3.13.2, pytest-8.3.5, pluggy-1.5.0
-rootdir: /Users/anastasiafloris/Desktop/pKaPredict/pKaPredict
-configfile: pyproject.toml
-collected 1 item                                                                                                      
-
-../Desktop/pKaPredict/pKaPredict/tests/test_plot_data.py .                                                      [100%]
-
-================================================== 1 passed in 4.66s ==================================================
-
-test_RDkit_descriptors:
-
-================================================= test session starts =================================================
-platform darwin -- Python 3.13.2, pytest-8.3.5, pluggy-1.5.0
-rootdir: /Users/anastasiafloris/Desktop/pKaPredict/pKaPredict
-configfile: pyproject.toml
-collected 2 items                                                                                                     
-
-../Desktop/pKaPredict/pKaPredict/tests/test_RDkit_descriptors.py ..                                             [100%]
-
-================================================== 2 passed in 0.81s ==================================================
 
 test_smiles_to_rdkit_descriptors:
 

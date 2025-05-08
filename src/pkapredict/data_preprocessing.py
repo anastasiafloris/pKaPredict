@@ -1,3 +1,18 @@
+"""
+Module: data_preprocessing.py
+
+This module provides utility functions for handling the raw pKa prediction dataset.
+It includes functionality to:
+
+1. Download the dataset CSV file from a specified URL and save it to a local directory.
+2. Preview the contents of the dataset.
+3. Clean the dataset by removing rows with missing pKa values and duplicates, then save
+   the cleaned data to a new CSV file.
+4. Visualize the distribution of pKa values.
+
+Intended for use in preprocessing workflows for machine learning tasks related to 
+molecular property prediction.
+"""
 from __future__ import annotations
 import pathlib
 from pathlib import Path
