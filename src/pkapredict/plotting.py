@@ -3,7 +3,7 @@
 import os
 import numpy as np
 import matplotlib.pyplot as plt
-import seaborn as sn
+import seaborn as sns
 import matplotlib.patches as mpatches
 from sklearn.metrics import mean_squared_error, r2_score
 
@@ -36,7 +36,7 @@ def plot_data(actual, predicted, title):
     R2 = r2_score(actual, predicted)
 
     plt.figure(figsize=(8, 6))
-    sn.regplot(x=predicted, y=actual, scatter_kws={'color': 'pink'}, line_kws={"lw": 2, "ls": "--", "color": "deeppink", "alpha": 0.7})
+    sns.regplot(x=predicted, y=actual, scatter_kws={'color': 'pink'}, line_kws={"lw": 2, "ls": "--", "color": "deeppink", "alpha": 0.7})
     plt.title(title, color="black")
     plt.xlabel("Predicted pKa", color="black")
     plt.ylabel("Experimental pKa", color="black")
@@ -53,8 +53,8 @@ def plot_data(actual, predicted, title):
     # model_selector.py
 
 
-import os
-import matplotlib.pyplot as plt
+
+
 from lazypredict.Supervised import LazyRegressor
 
 def plot_best_models(X_train, X_valid, y_train, y_valid, random_state=42):
@@ -88,16 +88,17 @@ def plot_best_models(X_train, X_valid, y_train, y_valid, random_state=42):
     plt.title("Top 10 Machine Learning Models for pKa Prediction")
     plt.gca().invert_yaxis()
 
-    # Save directly to existing folder
-    
-    save_path = os.path.join(current_dir, "Plots", "Top10MLModels.png")
-
+ 
+    # ✅ Ensure Plots directory exists
+    plot_dir = os.path.join(os.getcwd(), "Plots")
+    os.makedirs(plot_dir, exist_ok=True)
+    save_path = os.path.join(plot_dir, "Top10MLModels.png")
 
     plt.savefig(save_path, dpi=300, bbox_inches='tight')
-    
 
     return models_sorted
-
+    
+    
 
 def plot_k_vs_r2_ET(k_values, r2_scores, save_filename="optimalkvalue.png"):
     """
@@ -124,10 +125,50 @@ def plot_k_vs_r2_ET(k_values, r2_scores, save_filename="optimalkvalue.png"):
     plt.gca().set_facecolor('white')
     plt.tick_params(axis='both', colors='black')
 
-    # Define save path in pkapredict/notebooks/Plots
-    save_path = os.path.join(current_dir, "Plots", "OptimalKValueExtraTrees")
-
+    
+# ✅ Ensure Plots directory exists
+    plot_dir = os.path.join(os.getcwd(), "Plots")
+    os.makedirs(plot_dir, exist_ok=True)
+    save_path = os.path.join(plot_dir, "OptimalKValueExtraTrees")
 
     plt.savefig(save_path, dpi=300, bbox_inches='tight')
 
+    
+
     return save_path
+
+
+
+
+def LGBMplot_k_vs_r2(k_values, r2_scores, save_filename="OptimalKValueLGBM.png"):
+    """
+    Plots R² scores versus number of selected features (k) and saves the plot
+    in 'notebooks/Plots/'.
+
+    Parameters:
+        k_values (list or array-like): List of k values used in SelectKBest
+        r2_scores (list or array-like): Corresponding R² scores for each k
+        save_filename (str): Filename for the saved plot (should end in .png)
+
+    Returns:
+        save_path (str): Path to the saved plot image
+    """
+    plt.figure(figsize=(10, 6))
+    plt.plot(k_values, r2_scores, marker='o', linestyle='-', color='lightpink')
+    plt.xlabel("Number of Features (k)", color="black")
+    plt.ylabel("R² Score", color="black")
+    plt.title("Optimal k for SelectKBest Feature Selection", color="black")
+    plt.gca().set_facecolor('white')
+    plt.tick_params(axis='both', colors='black')
+
+    # Create save directory
+    plot_dir = os.path.join(os.getcwd(), "Plots")
+    os.makedirs(plot_dir, exist_ok=True)
+    save_path = os.path.join(plot_dir, save_filename)
+
+    plt.savefig(save_path, dpi=300, bbox_inches='tight')
+    plt.close()
+
+    return save_path
+
+
