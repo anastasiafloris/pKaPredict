@@ -10,34 +10,33 @@ tests/test_data_preprocessing.py .....                                          
 
 ========================================================== 5 passed in 6.48s ===========================================================
 
-test_plotting:
-========================================================= test session starts ==========================================================
+test_plot_data:
+================================================= test session starts =================================================
 platform darwin -- Python 3.13.2, pytest-8.3.5, pluggy-1.5.0
 rootdir: /Users/anastasiafloris/Desktop/pKaPredict/pKaPredict
 configfile: pyproject.toml
-collected 3 items                                                                                                                      
+collected 1 item                                                                                                      
 
-tests/test_plotting.py ...                                                                                                       [100%]
+tests/test_plot_data.py .                                                                                       [100%]
 
-=========================================================== warnings summary ===========================================================
-tests/test_plotting.py::test_plot_data
-  /Users/anastasiafloris/Desktop/pKaPredict/pKaPredict/src/pkapredict/plotting.py:76: UserWarning: FigureCanvasAgg is non-interactive, and thus cannot be shown
-    plt.show()
+================================================= 1 passed in 23.97s ==================================================
 
-tests/test_plotting.py::test_plot_best_models
-  /Users/anastasiafloris/miniconda3/envs/pKaPredict/lib/python3.13/site-packages/sklearn/neural_network/_multilayer_perceptron.py:691: ConvergenceWarning: Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.
-    warnings.warn(
+test_plot_best_models:
+================================================= test session starts =================================================
+platform darwin -- Python 3.13.2, pytest-8.3.5, pluggy-1.5.0
+rootdir: /Users/anastasiafloris/Desktop/pKaPredict/pKaPredict
+configfile: pyproject.toml
+collected 1 item                                                                                                      
 
-tests/test_plotting.py::test_plot_best_models
+tests/test_plot_best_models.py .                                                                                [100%]
+
+================================================== warnings summary ===================================================
+tests/test_plot_best_models.py::test_plot_best_models
   /Users/anastasiafloris/miniconda3/envs/pKaPredict/lib/python3.13/site-packages/sklearn/utils/validation.py:2739: UserWarning: X does not have valid feature names, but LGBMRegressor was fitted with feature names
     warnings.warn(
 
-tests/test_plotting.py::test_plot_k_vs_r2_ET_runs_without_error
-  /Users/anastasiafloris/Desktop/pKaPredict/pKaPredict/src/pkapredict/plotting.py:163: UserWarning: FigureCanvasAgg is non-interactive, and thus cannot be shown
-    plt.show()
-
 -- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
-==================================================== 3 passed, 4 warnings in 11.80s ====================================================
+============================================ 1 passed, 1 warning in 6.71s =============================================
 
 test_RDkit_descriptors:
 
@@ -79,12 +78,12 @@ collected 2 items
 
 test_predict_pKa:
 
-================================================= test session starts =================================================
+========================================================= test session starts ==========================================================
 platform darwin -- Python 3.13.2, pytest-8.3.5, pluggy-1.5.0
 rootdir: /Users/anastasiafloris/Desktop/pKaPredict/pKaPredict
 configfile: pyproject.toml
-collected 1 item                                                                                                      
+collected 1 item                                                                                                                       
 
-../Desktop/pKaPredict/pKaPredict/tests/test_predict_pKa.py .                                                    [100%]
+tests/test_predict_pKa.py .                                                                                                      [100%]
 
-================================================== 1 passed in 2.39s ==================================================
+========================================================== 1 passed in 11.14s ==========================================================
