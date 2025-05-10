@@ -19,6 +19,12 @@ pKaPredict
 
 *Functions used to train the machine learning model on a training dataset*
 
+→ **download_raw_dataset**
+Downloads a CSV file from a given URL and saves it in the specific data directory.
+
+→ **preview_data**
+Loads and previews the raw pKa dataset from a relative file path.
+
 → **clean_and_visualize_pka**
 Cleans the training dataset by removing duplicates and missing values; also provides basic visualizations for data exploration.
 
@@ -27,6 +33,9 @@ Transforms a DataFrame of SMILES into molecular descriptors, used for training t
     
 → **plot_data**
 Creates scatter plots comparing predicted vs. experimental pKa values to evaluate model performance and choose the most adapted model for this usage.
+
+→ **plot_k_vs_r2_ET and LGBMplot_k_vs_r2**
+Plots R² scores versus number of selected features (k) and saves the plot for the two machine learning models tested.
 
 *Core functions for predicting pKa from user-provided SMILES inputs*
 

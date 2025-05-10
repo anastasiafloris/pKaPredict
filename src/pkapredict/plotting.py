@@ -197,7 +197,7 @@ def LGBMplot_k_vs_r2(k_values, r2_scores, save_filename="OptimalKValueLGBM.png")
 
     plt.savefig(save_path, dpi=300, bbox_inches='tight')
     
-    plt.show()
+    
     return save_path
 
 

@@ -38,6 +38,17 @@ tests/test_plot_best_models.py::test_plot_best_models
 -- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
 ============================================ 1 passed, 1 warning in 6.71s =============================================
 
+test_plot_k_vs_r2:
+================================================= test session starts =================================================
+platform darwin -- Python 3.13.2, pytest-8.3.5, pluggy-1.5.0
+rootdir: /Users/anastasiafloris/Desktop/pKaPredict/pKaPredict
+configfile: pyproject.toml
+collected 1 item                                                                                                      
+
+tests/test_plot_k_vs_r2.py .                                                                                    [100%]
+
+================================================== 1 passed in 5.94s ==================================================
+
 test_RDkit_descriptors:
 
 ================================================= test session starts =================================================
