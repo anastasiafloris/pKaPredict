@@ -38,45 +38,34 @@ def plot_data(actual, predicted, title):
     """
     Plots predicted vs actual pKa values with regression line and evaluation metrics.
 
-    Parameters
-    ----------
-    actual : list or np.array
-        The actual (experimental) pKa values.
-    predicted : list or np.array
-        The predicted pKa values.
-    title : str
-        The title for the plot.
-    
     Returns
     -------
-    None
-        Displays the plot and prints RMSE and R² values.
-
-    Examples
-    --------
-    >>> import numpy as np
-    >>> actual = np.array([3.2, 7.4, 10.5])
-    >>> predicted = np.array([3.1, 7.3, 10.7])
-    >>> plot_data(actual, predicted, "Example Plot")
+    matplotlib.figure.Figure
+        The figure object, so it can be saved outside the function.
     """
     rmse = np.sqrt(mean_squared_error(actual, predicted))
     R2 = r2_score(actual, predicted)
 
-    plt.figure(figsize=(8, 6))
-    sns.regplot(x=predicted, y=actual, scatter_kws={'color': 'pink'}, line_kws={"lw": 2, "ls": "--", "color": "deeppink", "alpha": 0.7})
-    plt.title(title, color="black")
-    plt.xlabel("Predicted pKa", color="black")
-    plt.ylabel("Experimental pKa", color="black")
-    plt.gca().set_facecolor('white')  # Set background to white
+    fig, ax = plt.subplots(figsize=(8, 6))
+    sns.regplot(
+        x=predicted,
+        y=actual,
+        ax=ax,
+        scatter_kws={'color': 'pink'},
+        line_kws={"lw": 2, "ls": "--", "color": "deeppink", "alpha": 0.7}
+    )
+    ax.set_title(title, color="black")
+    ax.set_xlabel("Predicted pKa", color="black")
+    ax.set_ylabel("Experimental pKa", color="black")
+    ax.set_facecolor('white')
 
     # Add R² and RMSE patches to legend
     R2_patch = mpatches.Patch(color='pink', label=f"R² = {R2:.2f}")
     rmse_patch = mpatches.Patch(color='pink', label=f"RMSE = {rmse:.2f}")
-    plt.legend(handles=[R2_patch, rmse_patch])
-  
-    
+    ax.legend(handles=[R2_patch, rmse_patch])
+
     print(f"✅ Plot generated with R² = {R2:.2f} and RMSE = {rmse:.2f}")
-    
+    return fig  
     
 
 
