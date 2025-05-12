@@ -73,10 +73,10 @@ def plot_data(actual, predicted, title):
     R2_patch = mpatches.Patch(color='pink', label=f"R² = {R2:.2f}")
     rmse_patch = mpatches.Patch(color='pink', label=f"RMSE = {rmse:.2f}")
     plt.legend(handles=[R2_patch, rmse_patch])
-    plt.show()
+  
     
     print(f"✅ Plot generated with R² = {R2:.2f} and RMSE = {rmse:.2f}")
-
+    
     
 
 

@@ -11,7 +11,7 @@ It includes functionality to:
 4. Visualize the distribution of pKa values.
 
 Intended for use in preprocessing workflows for machine learning tasks related to 
-molecular property prediction.
+pKa prediction.
 """
 from __future__ import annotations
 import pathlib
@@ -20,7 +20,6 @@ import requests
 import pandas as pd
 import matplotlib.pyplot as plt
 import os
-
 
 def download_raw_dataset(
     url: str = "https://raw.githubusercontent.com/anastasiafloris/pKaPredict/main/data/pkadatasetRAWDATA.csv",
@@ -58,7 +57,6 @@ def download_raw_dataset(
     except requests.exceptions.RequestException as e:
         print(f"❌ Failed to download file: {e}")
         return None
-
 
 def preview_data(
     relative_path: str = os.path.join("..", "data", "pkadatasetRAWDATA.csv"),
@@ -98,7 +96,6 @@ def preview_data(
     else:
         print(f"❌ Error: The file '{file_path_obj}' does not exist.")
         return None
-
 
 def clean_and_visualize_pka(
     data_pka: pd.DataFrame,
