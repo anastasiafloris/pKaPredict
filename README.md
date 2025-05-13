@@ -75,16 +75,15 @@ brew install libomp
 ```
 If brew is not installed, follow the instructions here: https://brew.sh
 
-5. **Navigate to the root directory of the package in your terminal**:
+5. **Navigate to the script folder of the package in your terminal**:
 ```bash
-cd src
-cd pkapredict
+cd script
 ```
 6. **The package is yours 🎁**:
 
-Run the test_package.py file in your terminal to predict the pKa of a molecule of your choice, using its SMILES string:
+Run the runpackage.py file in your terminal to predict the pKa of a molecule of your choice, using its SMILES string:
 ```bash
-python test_package.py
+python runpackage.py
 ```
 
 ## 🪪 License 
