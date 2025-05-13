@@ -9,4 +9,4 @@ from .smiles_to_rdkit_descriptors import smiles_to_rdkit_descriptors
 from .data_preprocessing import download_raw_dataset, preview_data, clean_and_visualize_pka
 
 
-__version__ = "0.1.8"
+__version__ = "0.1.9"
